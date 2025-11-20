@@ -90,6 +90,47 @@ Para un proyecto en producción, lo ideal sería reemplazarlas con un `.env` tot
 
 ---
 
+## Despliegue con Docker Compose
+
+El proyecto está completamente dockerizado y se puede desplegar con un solo comando. El archivo `docker-compose.yml` en la raíz del proyecto orquesta todos los servicios necesarios.
+
+### **Servicios y Puertos**
+
+| Servicio | Contenedor | Puerto | Descripción |
+|----------|-----------|--------|-------------|
+| **PostgreSQL** | `store_db` | `5432` | Base de datos PostgreSQL 16 |
+| **Backend** | `nest_backend` | `3000` | API REST con NestJS |
+| **Frontend** | `react_frontend` | `5173` | Aplicación React servida por Nginx (puerto 80 interno) |
+
+### **Iniciar el Proyecto**
+
+```bash
+# Levantar todos los servicios
+docker-compose up -d
+
+# Ver el estado de los contenedores
+docker-compose ps
+
+# Ver los logs
+docker-compose logs -f
+
+# Detener todos los servicios
+docker-compose down
+
+# Detener y eliminar volúmenes (elimina datos de BD)
+docker-compose down -v
+```
+
+### **Acceso a los Servicios**
+
+Una vez levantados los contenedores, podrás acceder a:
+
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3000
+- **Base de Datos**: `localhost:5432` (usuario: `admin`, contraseña: `admin123`)
+
+---
+
 ## Documentación por proyecto
 
 - **backend/README.md** → librerías, decisiones técnicas y arquitectura  
@@ -97,4 +138,5 @@ Para un proyecto en producción, lo ideal sería reemplazarlas con un `.env` tot
 - **frontend/README.md** → librerías, decisiones técnicas y estructura  
 - **frontend/estructura.md** → estructura detallada del frontend  
 - **docs/** → evidencia visual del funcionamiento  
+
 
