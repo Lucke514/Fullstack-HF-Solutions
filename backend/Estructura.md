@@ -1,0 +1,47 @@
+```
+└── 📁backend
+    └── 📁src
+        └── 📁common
+            └── 📁database
+                ├── database.service.spec.ts
+                ├── database.service.ts
+        └── 📁config
+            ├── envs.ts
+            ├── index.ts
+        └── 📁modules
+            └── 📁category
+                └── 📁dto
+                    ├── create-category.dto.ts
+                └── 📁entities
+                    ├── category.entity.ts
+                ├── category.controller.ts
+                ├── category.module.ts
+                ├── category.service.spec.ts
+                ├── category.service.ts
+            └── 📁product
+                └── 📁dto
+                    ├── create-product.dto.ts
+                    ├── update-product.dto.ts
+                └── 📁entities
+                    ├── product.entity.ts
+                ├── product.controller.ts
+                ├── product.module.ts
+                ├── product.service.spec.ts
+                ├── product.service.ts
+        ├── app.module.ts
+        ├── main.ts
+    └── 📁test
+        ├── app.e2e-spec.ts
+        ├── jest-e2e.json
+    ├── .env
+    ├── .gitignore
+    ├── .prettierrc
+    ├── dockerfile
+    ├── eslint.config.mjs
+    ├── nest-cli.json
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    ├── tsconfig.build.json
+    └── tsconfig.json
+```
