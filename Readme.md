@@ -98,5 +98,3 @@ Para un proyecto en producción, lo ideal sería reemplazarlas con un `.env` tot
 - **frontend/estructura.md** → estructura detallada del frontend  
 - **docs/** → evidencia visual del funcionamiento  
 
-# Fullstack-HF-Solutions
-# Fullstack-HF-Solutions
